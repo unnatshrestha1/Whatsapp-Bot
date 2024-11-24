@@ -1,0 +1,90 @@
+// // // Send a message automatically to a specific number
+// // client.on('ready', () => {
+// //     const number = "9779843617676"; // Replace with the recipient's number (include the country code, but without the +)
+// //     const message = "Hello, this is an automated message from my bot made by Unnat!";
+// //     const chatId = `${number}@c.us`;
+
+// //     client.sendMessage(chatId, message).then(response => {
+// //         console.log('Message sent successfully:', response);
+// //     }).catch(err => {
+// //         console.error('Error sending message:', err);
+// //     });
+// // });
+
+
+// // CINDEX
+
+
+// const { Client } = require('whatsapp-web.js');
+// const qrcode = require('qrcode-terminal');
+
+// const client = new Client();
+
+// client.on('ready', () => {
+//     console.log('Client is ready!');
+// });
+
+// client.on('qr', qr => {
+//     qrcode.generate(qr, {small: true});
+//     console.log('QR RECEIVED', qr);
+
+// });
+
+// // Listening to all incoming messages
+// client.on('message_create', message => {
+// 	console.log(message.body);
+// });
+
+
+// client.on('message_create', message => {
+// 	if (message.body === 'ping') {
+// 		// send back "pong" to the chat the message was sent in
+// 		client.sendMessage(message.from, 'pong');
+// 	}
+// });
+
+
+// client.initialize();
+
+
+// // BEST ONE YET
+
+// const { Client, LocalAuth } = require('whatsapp-web.js');
+// const qrcode = require('qrcode-terminal');
+
+// const client = new Client({
+//     authStrategy: new LocalAuth()
+// });
+
+// client.on('qr', (qr) => {
+//     qrcode.generate(qr, { small: true });
+// });
+
+// client.on('ready', () => {
+//     console.log('Client is ready!');
+//     const number = '9779843617676'; // Replace with your phone number (Phone A)
+//     const chatId = `${number}@c.us`;
+
+//     client.sendMessage(chatId, 'Hello from the bot!');
+// });
+
+// client.on('message', message => {
+//     console.log(`Message from ${message.from}: ${message.body}`);
+
+//     // Respond to greetings
+//     if (message.body.toLowerCase().includes('hello')) {
+//         message.reply('Hi there! How can I help you today?');
+//     } else if (message.body.toLowerCase().includes('hi')) {
+//         message.reply('Hello! What can I do for you?');
+//     } else if (message.body.toLowerCase().includes('how are you')) {
+//         message.reply('I am just a bot, but I am here to help you!');
+//     } else {
+//         message.reply('I did not understand that. Can you please rephrase?');
+//     }
+// });
+
+// client.initialize();
+
+
+// //mero primary number yo code ma halyo vaney that'll be the client
+// //qr scan garne phone number chai bot apparently

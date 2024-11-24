@@ -1,0 +1,44 @@
+1. Basic Greetings
+User Message:
+"Hello"
+
+Bot Response:
+"Hi there! How can I help you today?"
+2. Responding to the Current Time
+
+User Message:
+"What time is it?"
+
+Bot Response:
+"The current date and time is: [Current Date and Time]"
+
+3. Echoing a Message
+User Message:
+"Echo Hello, bot!"
+
+Bot Response:
+"Hello, bot!" (The bot replies with the text after "Echo")
+
+4. Providing Information Using Commands
+Help Command
+
+User Message:
+"!info help"
+
+Bot Response:
+"Available commands:\n!info help - Show this help message\n!info bot - Information about the bot"
+Bot Information Command
+
+User Message:
+"!info bot"
+
+Bot Response:
+"This bot is built using whatsapp-web.js and can respond to various commands."
+
+5. Unknown Commands
+
+User Message:
+"!info unknown"
+
+Bot Response:
+"Unknown command. Type !info help for a list of available commands."
